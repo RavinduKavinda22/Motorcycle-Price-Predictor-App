@@ -4,9 +4,10 @@ import numpy as np
 import joblib
 from custom_models import EnsembleRegressor 
 import warnings
-warnings.filterwarnings("ignore")
+warnings.filterwarnings("ignore", category=UserWarning)
 import os
 os.environ["XGBOOST_ENABLE_STRICT_VERSION_CHECK"] = "0"
+
 
 # =============================
 # Load Models & Encoders
