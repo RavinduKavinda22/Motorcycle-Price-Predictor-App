@@ -2,12 +2,13 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 import joblib
-from custom_models import EnsembleRegressor 
+from custom_models import EnsembleRegressor
+import xgboost as xgb
 import warnings
-warnings.filterwarnings("ignore", category=UserWarning)
 import os
+warnings.filterwarnings("ignore")
 os.environ["XGBOOST_ENABLE_STRICT_VERSION_CHECK"] = "0"
-
+xgb.set_config(verbosity=0)
 
 # =============================
 # Load Models & Encoders
